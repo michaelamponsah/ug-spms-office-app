@@ -1,2 +1,3 @@
-# ug-spms-office-tool
-An office management tool for SPMS-UG
+## SPMS Office Productivity Tool
+
+Documentattion to be added later... 🎯
