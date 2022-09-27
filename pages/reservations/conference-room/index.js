@@ -1,12 +1,11 @@
 import React from "react";
+import Head from "../../../components/Head";
 
 const conferenceRoomReservationPage = () => {
   return (
     <>
-      <Head>
-        <title>UG|SPMS - Conference hall reservation</title>
-      </Head>
-      <div>conferenceRoomReservation</div>;
+      <Head title="UG|SPMS - Conference room reservation" />
+      <div>conferenceRoomReservation</div>
     </>
   );
 };

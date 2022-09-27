@@ -1,13 +1,10 @@
 import React from "react";
-import Head from "next/head";
-import LayoutStyles from "../styles/Layout.module.css";
 
-const Layout = ({ title }) => {
+import layoutStyles from "../styles/Layout.module.css";
+
+const Layout = ({ children }) => {
   return (
-    <div className={LayoutStyles.container}>
-      <Head>
-        <title>{title}</title>
-      </Head>
+    <div className={layoutStyles.container}>
       <main className={layoutStyles.main}>{children}</main>
     </div>
   );

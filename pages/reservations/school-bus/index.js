@@ -1,12 +1,10 @@
 import React from "react";
-import Head from "next/head";
+import Head from "../../../components/Head";
 
 const busReservationPage = () => {
   return (
     <>
-      <Head>
-        <title>UG|SPMS - bus reservation</title>
-      </Head>
+      <Head title="UG|SPMS - bus reservation" />
       <div>busReservation</div>;
     </>
   );
