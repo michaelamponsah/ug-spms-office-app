@@ -11,4 +11,3 @@ const SeniorLecturerPromotionsPage = () => {
 };
 
 export default SeniorLecturerPromotionsPage;
-S;
