@@ -5,7 +5,7 @@ import InnerPageWrapper from "../../../components/InnerPageWrapper";
 const conferenceRoomReservationPage = () => {
   return (
     <InnerPageWrapper>
-      <Head title="UG|SPMS - Conference room reservation" />
+      <Head title="UG | SPMS - Conference room reservation" />
       <div>conferenceRoomReservation</div>
     </InnerPageWrapper>
   );

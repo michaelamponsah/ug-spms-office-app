@@ -1,0 +1,19 @@
+.nav-wrapper {
+    background-color: #1F618D;
+    color: #ffffff;
+    width: 220px;
+    padding: 1.5em 0.8em;
+}
+
+.nav-wrapper>ul {
+    list-style-type: none;
+}
+
+.nav-wrapper li {
+    padding: 0.5em;
+    border-bottom: 1px solid rgba(23, 32, 42, 0.2);
+}
+
+.nav-wrapper li:hover {
+    background-color: rgba(23, 32, 42, 0.2);
+}

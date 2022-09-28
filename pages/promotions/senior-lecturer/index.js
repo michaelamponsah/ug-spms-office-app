@@ -4,7 +4,7 @@ import InnerPageWrapper from "../../../components/InnerPageWrapper";
 const SeniorLecturerPromotionsPage = () => {
   return (
     <InnerPageWrapper>
-      <Head title="SPMS|UG - application for position od senior lecturer" />
+      <Head title="SPMS | UG - application for position od senior lecturer" />
       <div>
         <h1>Senior Lecturer promotions</h1>
       </div>

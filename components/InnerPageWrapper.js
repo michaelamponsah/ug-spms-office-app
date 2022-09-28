@@ -1,12 +1,15 @@
 import React, { Children } from "react";
 import SideNavigation from "./SideNavigation";
+import styles from "../styles/InnerPageWrapper.module.css";
 
 const InnerPageWrapper = ({ children }) => {
   return (
-    <React.Fragment>
-      <SideNavigation />
-      <div>{children}</div>
-    </React.Fragment>
+    <div className={`${styles["inner-page-wrapper"]}`}>
+      <div>
+        <SideNavigation />
+      </div>
+      <div className={`${styles["main-page"]}`}>{children}</div>
+    </div>
   );
 };
 

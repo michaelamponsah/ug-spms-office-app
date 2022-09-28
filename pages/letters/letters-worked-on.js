@@ -5,7 +5,7 @@ import InnerPageWrapper from "../../components/InnerPageWrapper";
 const lettersSeenPage = () => {
   return (
     <InnerPageWrapper>
-      <Head title="UG|SPMS - Letters worked on" />
+      <Head title="UG | SPMS - Letters worked on" />
       <h1>Letters worked on</h1>
     </InnerPageWrapper>
   );

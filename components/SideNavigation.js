@@ -1,27 +1,28 @@
 import Link from "next/link";
 import React from "react";
+import styles from "../styles/SideNav.module.css";
 
 const SideNavigation = () => {
   return (
-    <nav>
+    <nav className={`${styles["nav-wrapper"]}`}>
       <ul>
         <li>
-          <Link href="">Dashboard</Link>
+          <Link href="#">Dashboard</Link>
         </li>
         <li>
-          <Link href="">Bus Reservations</Link>
+          <Link href="/reservations/school-bus">Bus Reservations</Link>
         </li>
         <li>
-          <Link href="">Conf. Hall Rsv</Link>
+          <Link href="/reservations/conference-room">Conf. Hall Rsv</Link>
         </li>
         <li>
-          <Link href="">Letters Seen</Link>
+          <Link href="/letters/letters-seen">Letters Seen</Link>
         </li>
         <li>
-          <Link href="">Letters Worked On</Link>
+          <Link href="/letters/letters-worked-on">Letters Worked On</Link>
         </li>
         <li>
-          <Link href="">Promotions</Link>
+          <Link href="#">Promotions</Link>
         </li>
       </ul>
     </nav>
