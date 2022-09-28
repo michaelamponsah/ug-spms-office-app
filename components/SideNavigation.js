@@ -7,7 +7,7 @@ const SideNavigation = () => {
     <nav className={`${styles["nav-wrapper"]}`}>
       <ul>
         <li>
-          <Link href="#">Dashboard</Link>
+          <Link href="/dashboard">Dashboard</Link>
         </li>
         <li>
           <Link href="/reservations/school-bus">Bus Reservations</Link>
@@ -22,7 +22,9 @@ const SideNavigation = () => {
           <Link href="/letters/letters-worked-on">Letters Worked On</Link>
         </li>
         <li>
-          <Link href="#">Promotions</Link>
+          <Link href="/promotions/processing-of-application-for-promotion">
+            Promotions
+          </Link>
         </li>
       </ul>
     </nav>

@@ -17,15 +17,9 @@ a {
   padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  color: white;
+  background-color: #E5E8E8 !important;
 }
-.page-wrapper{
-  
-}
+
+@media (prefers-color-scheme: dark) {}
