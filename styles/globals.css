@@ -13,6 +13,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +25,7 @@ a {
     color: white;
     background: black;
   }
+}
+.page-wrapper{
+  
 }

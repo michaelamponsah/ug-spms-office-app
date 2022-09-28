@@ -1,12 +1,13 @@
 import React from "react";
 import Head from "../../components/Head";
+import InnerPageWrapper from "../../components/InnerPageWrapper";
 
 const lettersSeenPage = () => {
   return (
-    <div>
-      <Head title="UG|SPMS - Letters worked on" />
+    <InnerPageWrapper>
+      <Head title="UG | SPMS - Letters worked on" />
       <h1>Letters worked on</h1>
-    </div>
+    </InnerPageWrapper>
   );
 };
 

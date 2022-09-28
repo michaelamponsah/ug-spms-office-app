@@ -1,0 +1,13 @@
+.inner-page-wrapper {
+    display: flex;
+}
+.inner-page-wrapper:first-child{
+    align-self: flex-start;
+}
+.main-page {
+    width: 100%;
+    margin-left: 2em;
+    background-color: #E5E8E8;
+    min-height: 100vh;
+    padding: 0.7em;
+}
