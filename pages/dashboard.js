@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "../components/Head"
+import Head from "../components/Head";
 import InnerPageWrapper from "../components/InnerPageWrapper";
 
 const dashboard = () => {
