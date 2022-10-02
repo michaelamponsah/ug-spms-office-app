@@ -17,7 +17,9 @@ const ApplicantBio = () => {
   const positions = ["Senior Lecturer", "Asscociate Professor", "Professor"];
   return (
     <div className={`${styles["applicant-bio"]}`}>
-      <span className={styles.title}>Basic Information of Applicant</span>
+      <span className={styles.title}>
+        Basic Information of Applicant and Preliminary Assessments
+      </span>
       <div className={styles.fields}>
         <InputField label="First Name" type="text" placeholder="Michael" />
         <InputField label="Last Name" type="text" placeholder="Amponsah" />
@@ -39,7 +41,10 @@ const ApplicantBio = () => {
         />
         <InputField label="Date application was received" type="date" />
         <InputField label="Date application was put before S.M.C" type="date" />
-        <TextArea label="S.M.C's Recommendation" placeholder="Please type here..." />
+        <TextArea
+          label="S.M.C's Recommendation"
+          placeholder="Please type here..."
+        />
       </div>
     </div>
   );
