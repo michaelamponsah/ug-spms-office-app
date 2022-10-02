@@ -3,6 +3,7 @@ import InputField from "./InputField";
 
 import styles from "../styles/ApplicantBio.module.css";
 import SelectInput from "./SelectInput";
+import TextArea from "./TextArea";
 
 const ApplicantBio = () => {
   const departments = [
@@ -36,6 +37,9 @@ const ApplicantBio = () => {
           placeholder="Please select an option. Eg. Snr. Lecturer"
           options={positions}
         />
+        <InputField label="Date application was received" type="date" />
+        <InputField label="Date application was put before S.M.C" type="date" />
+        <TextArea label="S.M.C's Recommendation" placeholder="Please type here..." />
       </div>
     </div>
   );
