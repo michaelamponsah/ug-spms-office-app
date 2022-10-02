@@ -4,7 +4,7 @@ import InputField from "./InputField";
 import styles from "../styles/ApplicantBio.module.css";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
-import FormHeading from "./FormHeading";
+import FormSubHeading from "./FormHeading";
 
 const ApplicantBio = () => {
   const departments = [
