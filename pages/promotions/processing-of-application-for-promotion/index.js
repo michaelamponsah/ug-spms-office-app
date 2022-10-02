@@ -4,6 +4,7 @@ import ExternalAssessment from "../../../components/ExternalAssessment";
 import Head from "../../../components/Head";
 import InnerPageWrapper from "../../../components/InnerPageWrapper";
 import PromotionForm from "../../../components/PromotionForm";
+import PublicationsAndReminders from "../../../components/PublicationsAndReminders";
 
 const ProfessorialPromotionsPage = () => {
   return (
@@ -13,7 +14,7 @@ const ProfessorialPromotionsPage = () => {
         <h1>Promotion Application Tracking Form</h1>
         <div>
           <PromotionForm>
-            <ExternalAssessment />
+            <PublicationsAndReminders />
           </PromotionForm>
         </div>
       </div>
