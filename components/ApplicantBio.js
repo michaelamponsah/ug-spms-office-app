@@ -4,6 +4,7 @@ import InputField from "./InputField";
 import styles from "../styles/ApplicantBio.module.css";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
+import FormHeading from "./FormHeading";
 
 const ApplicantBio = () => {
   const departments = [
@@ -17,9 +18,9 @@ const ApplicantBio = () => {
   const positions = ["Senior Lecturer", "Asscociate Professor", "Professor"];
   return (
     <div className={`${styles["applicant-bio"]}`}>
-      <span className={styles.title}>
+      <FormSubHeading>
         Basic Information of Applicant and Preliminary Assessments
-      </span>
+      </FormSubHeading>
       <div className={styles.fields}>
         <InputField label="First Name" type="text" placeholder="Michael" />
         <InputField label="Last Name" type="text" placeholder="Amponsah" />

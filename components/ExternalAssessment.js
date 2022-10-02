@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../styles/ExternalAssessment.module.css";
+import FormHeading from "./FormHeading";
+import FormSubHeading from "./FormSubHeading";
 import InputField from "./InputField";
 
 const ExternalAssessment = () => {
   return (
     <div className={`${styles["external-assessment"]}`}>
-      <span className={styles.title}>Details on External Assessments</span>
+      <FormSubHeading>Details on External Assessments</FormSubHeading>
       <div className={styles.fields}>
         <InputField
           label="Date on which lett. was sent to HoD to submit names and addr. of ext. assessors"
@@ -48,21 +50,15 @@ const ExternalAssessment = () => {
           isRequired={false}
         />
       </div>
-      <span className={`${styles["sub-title"]}`}>
-        Date on which assessors were written to
-      </span>
+      <FormSubHeading> Date on which assessors were written to</FormSubHeading>
       <div className={styles.fields}>
         <InputField label="Assessor 1" type="date" />
-
         <InputField label="Assessor 2" type="date" />
         <InputField label="Assessor 3" type="date" isRequired={false} />
       </div>
-      <span className={`${styles["sub-title"]}`}>
-        Date on which replies were received
-      </span>
+      <FormSubHeading> Date on which replies were received</FormSubHeading>
       <div className={styles.fields}>
         <InputField label="Assessor 1" type="date" />
-
         <InputField label="Assessor 2" type="date" />
         <InputField label="Assessor 3" type="date" isRequired={false} />
       </div>
