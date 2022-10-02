@@ -20,4 +20,5 @@
     border: 1px solid #aaa;
     margin: 8px 0;
     width: 100%;
+    resize: none;
 }
