@@ -1,5 +1,6 @@
 import React from "react";
 import ApplicantBio from "../../../components/ApplicantBio";
+import ExternalAssessment from "../../../components/ExternalAssessment";
 import Head from "../../../components/Head";
 import InnerPageWrapper from "../../../components/InnerPageWrapper";
 import PromotionForm from "../../../components/PromotionForm";
@@ -12,7 +13,7 @@ const ProfessorialPromotionsPage = () => {
         <h1>Promotion Application Tracking Form</h1>
         <div>
           <PromotionForm>
-            <ApplicantBio />
+            <ExternalAssessment />
           </PromotionForm>
         </div>
       </div>

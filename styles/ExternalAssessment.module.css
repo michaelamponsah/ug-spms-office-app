@@ -1,0 +1,14 @@
+.external-assessment .title, .sub-title{
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    margin: 1em 0;
+}
+.external-assessment .sub-title{
+    font-size: 1rem;
+}
+.fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
