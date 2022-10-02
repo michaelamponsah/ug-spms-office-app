@@ -6,7 +6,7 @@ import styles from "../styles/ApplicantBio.module.css";
 const ApplicantBio = () => {
   return (
     <div className={`${styles["applicant-bio"]}`}>
-      <span>Bio of Applicant</span>
+      <span className={styles.title}>Bio of Applicant</span>
       <div className={styles.fields}>
         <InputField label="First Name" type="text" placeholder="Michael" />
         <InputField label="Last Name" type="text" placeholder="Amponsah" />
