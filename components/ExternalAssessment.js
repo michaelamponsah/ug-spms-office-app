@@ -1,10 +1,19 @@
 import React from "react";
 import styles from "../styles/ExternalAssessment.module.css";
+import AppButton from "./AppButton";
 import FormHeading from "./FormHeading";
 import FormSubHeading from "./FormSubHeading";
 import InputField from "./InputField";
 
-const ExternalAssessment = () => {
+const ExternalAssessment = ({ nextStep, goBack }) => {
+  const handleContinue = (event) => {
+    event.preventDefault();
+    nextStep();
+  };
+  const handleGoback = (event) => {
+    event.preventDefault();
+    goBack();
+  };
   return (
     <div className={`${styles["external-assessment"]}`}>
       <FormSubHeading>Details on External Assessments</FormSubHeading>
@@ -61,6 +70,10 @@ const ExternalAssessment = () => {
         <InputField label="Assessor 1" type="date" />
         <InputField label="Assessor 2" type="date" />
         <InputField label="Assessor 3" type="date" isRequired={false} />
+      </div>
+      <div className="form-button-wrapper">
+        <AppButton title="Go back" onClick={handleGoback} />
+        <AppButton title="Save and Continue" onClick={handleContinue} />
       </div>
     </div>
   );

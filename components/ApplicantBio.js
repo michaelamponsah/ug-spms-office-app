@@ -5,8 +5,9 @@ import styles from "../styles/ApplicantBio.module.css";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
 import FormSubHeading from "./FormHeading";
+import AppButton from "./AppButton";
 
-const ApplicantBio = () => {
+const ApplicantBio = ({ nextStep }) => {
   const departments = [
     "Chemistry",
     "Computer Science",
@@ -16,6 +17,11 @@ const ApplicantBio = () => {
     "Statistics & Act. Science",
   ];
   const positions = ["Senior Lecturer", "Asscociate Professor", "Professor"];
+
+  const handleContinue = (event) => {
+    event.preventDefault();
+    nextStep();
+  };
   return (
     <div className={`${styles["applicant-bio"]}`}>
       <FormSubHeading>
@@ -47,6 +53,7 @@ const ApplicantBio = () => {
           placeholder="Please type here..."
         />
       </div>
+      <AppButton title="Save and Continue" onClick={handleContinue} />
     </div>
   );
 };

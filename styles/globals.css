@@ -21,5 +21,9 @@ body {
   color: #000000;
   background-color: #E5E8E8 !important;
 }
-
+.form-button-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (prefers-color-scheme: dark) {}

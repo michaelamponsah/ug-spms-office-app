@@ -1,12 +1,24 @@
 import React from "react";
 import styles from "../styles/PublicationsAndReminders.module.css";
+
+import AppButton from "./AppButton";
 import FormHeading from "./FormHeading";
 import FormSubHeading from "./FormSubHeading";
 import InputField from "./InputField";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
 
-const PublicationsAndReminders = () => {
+const PublicationsAndReminders = ({ goBack }) => {
+  const handleGoback = (event) => {
+    event.preventDefault();
+    goBack();
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Submiting...");
+  };
+
   return (
     <div className={`${styles["publications-reminders"]}`}>
       <FormSubHeading>
@@ -61,6 +73,10 @@ const PublicationsAndReminders = () => {
           placeholder="Please type here..."
           isRequired={false}
         />
+      </div>
+      <div className="form-button-wrapper">
+        <AppButton title="Go back" onClick={handleGoback} />
+        <AppButton title="Submit" type="submit" onClick={handleSubmit} />
       </div>
     </div>
   );

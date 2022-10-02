@@ -36,13 +36,13 @@ const MultiStepFormWrapper = () => {
     case 1:
       return (
         <PromotionForm>
-          <ApplicantBio continue={nextStep} />
+          <ApplicantBio nextStep={nextStep} />
         </PromotionForm>
       );
     case 2:
       return (
         <PromotionForm>
-          <ExternalAssessment continue={nextStep} goBack={prevStep} />
+          <ExternalAssessment nextStep={nextStep} goBack={prevStep} />
         </PromotionForm>
       );
     case 3:
