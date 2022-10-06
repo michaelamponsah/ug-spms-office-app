@@ -6,14 +6,25 @@ const SelectInput = ({
   placeholder,
   isRequired = true,
   options = [],
+  name,
+  value,
+  onInputChange,
 }) => {
+  const handleChange = (event) => {
+    const selectedValue = event.target.value;
+    const fieldName = event.target.name;
+    onInputChange(selectedValue, fieldName);
+  };
+
   return (
     <div className={`${styles["input-field"]}`}>
       <label>{label}</label>
-      <select>
+      <select name={name} value={value} onChange={handleChange}>
         <option value="">{placeholder}</option>
         {options.map((option) => (
-          <option value={option}>{option}</option>
+          <option key={option} value={option}>
+            {option}
+          </option>
         ))}
       </select>
     </div>

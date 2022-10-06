@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const PromotionForm = ({ children }) => {
-  const handleSubmit = () => {};
+const PromotionForm = ({ children, onSubmitForm }) => {
   return (
     <React.Fragment>
-      <form onSubmit={handleSubmit}>{children}</form>
+      <form onSubmit={onSubmitForm} name="applicationForPromotionForm">
+        {children}
+      </form>
     </React.Fragment>
   );
 };
