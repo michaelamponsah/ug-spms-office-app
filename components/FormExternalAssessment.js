@@ -5,7 +5,7 @@ import FormHeading from "./FormHeading";
 import FormSubHeading from "./FormSubHeading";
 import InputField from "./InputField";
 
-const ExternalAssessment = ({ nextStep, goBack }) => {
+const FormExternalAssessment = ({ nextStep, goBack }) => {
   const handleContinue = (event) => {
     event.preventDefault();
     nextStep();
@@ -79,4 +79,4 @@ const ExternalAssessment = ({ nextStep, goBack }) => {
   );
 };
 
-export default ExternalAssessment;
+export default FormExternalAssessment;

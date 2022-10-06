@@ -8,7 +8,7 @@ import InputField from "./InputField";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
 
-const PublicationsAndReminders = ({ goBack }) => {
+const FormPublicationsAndReminders = ({ goBack }) => {
   const handleGoback = (event) => {
     event.preventDefault();
     goBack();
@@ -82,4 +82,4 @@ const PublicationsAndReminders = ({ goBack }) => {
   );
 };
 
-export default PublicationsAndReminders;
+export default FormPublicationsAndReminders;

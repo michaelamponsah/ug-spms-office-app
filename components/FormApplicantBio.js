@@ -7,7 +7,7 @@ import TextArea from "./TextArea";
 import FormSubHeading from "./FormHeading";
 import AppButton from "./AppButton";
 
-const ApplicantBio = ({ nextStep }) => {
+const FormApplicantBio = ({ nextStep, goBack, step }) => {
   const departments = [
     "Chemistry",
     "Computer Science",
@@ -21,6 +21,10 @@ const ApplicantBio = ({ nextStep }) => {
   const handleContinue = (event) => {
     event.preventDefault();
     nextStep();
+  };
+  const handleGoBack = (event) => {
+    event.preventDefault();
+    goBack();
   };
   return (
     <div className={`${styles["applicant-bio"]}`}>
@@ -53,9 +57,16 @@ const ApplicantBio = ({ nextStep }) => {
           placeholder="Please type here..."
         />
       </div>
-      <AppButton title="Save and Continue" onClick={handleContinue} />
+      <div className="form-button-wrapper">
+        <AppButton
+          title="Go back"
+          onClick={handleGoBack}
+          isDisabled={step == 1 ? true : false}
+        />
+        <AppButton title="Save and Continue" onClick={handleContinue} />
+      </div>
     </div>
   );
 };
 
-export default ApplicantBio;
+export default FormApplicantBio;

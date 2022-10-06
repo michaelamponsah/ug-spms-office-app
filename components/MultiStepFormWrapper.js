@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
-import ApplicantBio from "./ApplicantBio";
-import ExternalAssessment from "./ExternalAssessment";
+import FormApplicantBio from "./FormApplicantBio";
+import FormExternalAssessment from "./FormExternalAssessment";
 import PromotionForm from "./PromotionForm";
-import PublicationsAndReminders from "./PublicationsAndReminders";
+import FormPublicationsAndReminders from "./FormPublicationsAndReminders";
+import next from "next";
 
 const MultiStepFormWrapper = () => {
   // using state to keep track of all data collected from the form
@@ -36,19 +37,22 @@ const MultiStepFormWrapper = () => {
     case 1:
       return (
         <PromotionForm>
-          <ApplicantBio nextStep={nextStep} />
+          <FormApplicantBio nextStep={nextStep} goBack={prevStep} step={step} />
         </PromotionForm>
       );
     case 2:
       return (
         <PromotionForm>
-          <ExternalAssessment nextStep={nextStep} goBack={prevStep} />
+          <FormExternalAssessment nextStep={nextStep} goBack={prevStep} />
         </PromotionForm>
       );
     case 3:
       return [
         <PromotionForm>
-          <PublicationsAndReminders goBack={prevStep} />
+          <FormPublicationsAndReminders
+            goBack={prevStep}
+            step={step}
+          />
         </PromotionForm>,
       ];
   }

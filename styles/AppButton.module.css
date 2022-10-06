@@ -12,3 +12,7 @@
 .app-button:hover{
     cursor: pointer;
 }
+.app-button:disabled{
+    background-color: #6c7377;
+    color: #7e8081;
+}
