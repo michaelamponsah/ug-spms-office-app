@@ -12,7 +12,6 @@ const FormExternalAssessment = ({ nextStep, goBack, onFormChange, values }) => {
 
   const handleContinue = (event) => {
     event.preventDefault();
-    console.log(assessor1);
 
     nextStep();
   };

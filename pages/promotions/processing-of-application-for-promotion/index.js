@@ -69,13 +69,17 @@ const ProfessorialPromotionsPage = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form submitted");
+    console.log({
+      success: true,
+      message: "Form submitted successfully",
+      data: promotionFormValues,
+    });
   };
 
   const handleChange = (enteredInput, fieldName, fieldLabel) => {
     /**
      * We update the state based on the field label.
-     * This implementation was influenced by the use of nested state 
+     * This implementation was influenced by the use of nested state
      */
     switch (fieldLabel) {
       case "assessor1":
