@@ -1,0 +1,18 @@
+.app-button {
+    display: block;
+    text-transform: uppercase;
+    padding: 1em;
+    border: none;
+    background-color: #1F618D;
+    color: #fefefe;
+    width: 200px;
+    min-width: auto;
+    text-align: center;
+}
+.app-button:hover{
+    cursor: pointer;
+}
+.app-button:disabled{
+    background-color: #6c7377;
+    color: #7e8081;
+}

@@ -1,0 +1,11 @@
+.applicant-bio .title{
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    margin: 1em 0;
+}
+.fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

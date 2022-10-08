@@ -1,0 +1,24 @@
+.input-field {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.input-field label {
+    display: block;
+    font-size: 14px;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
+.input-field textarea {
+    height: 5.26rem;
+    padding: 0 0.94rem;
+    font-weight: 400;
+    font-size: 0.94rem;
+    color: #333;
+    outline: none;
+    border: 1px solid #aaa;
+    margin: 8px 0;
+    width: 100%;
+    resize: none;
+}

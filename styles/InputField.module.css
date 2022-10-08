@@ -1,0 +1,27 @@
+.input-field {
+    width: calc(100% / 2 - 15px);
+    margin: 5px 0;
+}
+
+.input-field label {
+    display: block;
+    font-size: 14px;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
+.input-field input {
+    height: 2.63rem;
+    padding: 0 0.94rem;
+    font-weight: 400;
+    font-size: 0.94rem;
+    color: #333;
+    outline: none;
+    border: 1px solid #aaa;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.input-field input:is(:focus, :valid) {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13);
+}
