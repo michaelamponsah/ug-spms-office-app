@@ -4,6 +4,7 @@ import styles from "../styles/InputField.module.css";
 const InputField = ({
   label,
   type,
+  dataLabel,
   placeholder,
   isRequired = true,
   name,
@@ -13,7 +14,8 @@ const InputField = ({
   const handleChange = (event) => {
     const enteredInput = event.target.value;
     const fieldName = event.target.name;
-    onInputChange(enteredInput, fieldName);
+    const fieldLabel = event.target.getAttribute("data-fieldlabel");
+    onInputChange(enteredInput, fieldName, fieldLabel);
   };
   return (
     <div className={`${styles["input-field"]}`}>
@@ -25,6 +27,7 @@ const InputField = ({
         name={name}
         value={value}
         onChange={handleChange}
+        data-fieldlabel={dataLabel}
       />
     </div>
   );

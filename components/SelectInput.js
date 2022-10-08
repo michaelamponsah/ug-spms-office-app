@@ -3,6 +3,7 @@ import styles from "../styles/SelectInput.module.css";
 
 const SelectInput = ({
   label,
+  dataLabel,
   placeholder,
   isRequired = true,
   options = [],
@@ -13,13 +14,19 @@ const SelectInput = ({
   const handleChange = (event) => {
     const selectedValue = event.target.value;
     const fieldName = event.target.name;
-    onInputChange(selectedValue, fieldName);
+    const fieldLabel = event.target.getAttribute("data-fieldlabel");
+    onInputChange(selectedValue, fieldName, fieldLabel);
   };
 
   return (
     <div className={`${styles["input-field"]}`}>
       <label>{label}</label>
-      <select name={name} value={value} onChange={handleChange}>
+      <select
+        name={name}
+        value={value}
+        onChange={handleChange}
+        data-fieldlabel={dataLabel}
+      >
         <option value="">{placeholder}</option>
         {options.map((option) => (
           <option key={option} value={option}>

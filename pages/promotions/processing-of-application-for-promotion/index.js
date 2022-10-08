@@ -20,16 +20,44 @@ const ProfessorialPromotionsPage = () => {
     dateToDepartment: "",
     responseDateFromDept: "",
 
-    fullName: "",
-    address: "",
-    dateWrittenTo: "",
-    dateResRecv: "",
-    datePublicationSent: "",
-    dateReminderSent: "",
-    dateAssessmentRecv: "",
-    natureOfRes: "",
-    formatOfres: "",
-    acknLetterDate: "",
+    externalAssessors: {
+      assessor1: {
+        fullNameOfExtAssessor1: "",
+        addressOfExtAssessor1: "",
+        dateWrittenToExtAssessor1: "",
+        dateResRecvExtAss1: "",
+        datePublicationSentExtAss1: "",
+        dateReminderSentExtAss1: "",
+        dateAssessmentRecvExtAss1: "",
+        natureOfResExtAss1: "",
+        formatOfresExtAss1: "",
+        acknLetterDateExtAss1: "",
+      },
+      assessor2: {
+        fullNameOfExtAssessor2: "",
+        addressOfExtAssessor2: "",
+        dateWrittenToExtAssessor2: "",
+        dateResRecvExtAss2: "",
+        datePublicationSentExtAss2: "",
+        dateReminderSentExtAss2: "",
+        dateAssessmentRecvExtAss2: "",
+        natureOfResExtAss2: "",
+        formatOfresExtAss2: "",
+        acknLetterDateExtAss2: "",
+      },
+      assessor3: {
+        fullNameOfExtAssessor3: "",
+        addressOfExtAssessor3: "",
+        dateWrittenToExtAssessor3: "",
+        dateResRecvExtAss3: "",
+        datePublicationSentExtAss3: "",
+        dateReminderSentExtAss3: "",
+        dateAssessmentRecvExtAss3: "",
+        natureOfResExtAss3: "",
+        formatOfresExtAss2: "",
+        acknLetterDateExtAss2: "",
+      },
+    },
 
     furtherActions: "",
     dateDossierSentToCollege: "",
@@ -39,17 +67,59 @@ const ProfessorialPromotionsPage = () => {
     initialPromotionFormValues
   );
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted");
   };
 
-  const handleChange = (enteredInput, fieldName) => {
-    setPromotionFormValues({
-      ...promotionFormValues,
-      [fieldName]: enteredInput,
-    });
+  const handleChange = (enteredInput, fieldName, fieldLabel) => {
+    /**
+     * We update the state based on the field label.
+     * This implementation was influenced by the use of nested state 
+     */
+    switch (fieldLabel) {
+      case "assessor1":
+        setPromotionFormValues({
+          ...promotionFormValues,
+          externalAssessors: {
+            ...promotionFormValues.externalAssessors,
+            assessor1: {
+              ...promotionFormValues.externalAssessors.assessor1,
+              [fieldName]: enteredInput,
+            },
+          },
+        });
+        break;
+      case "assessor2":
+        setPromotionFormValues({
+          ...promotionFormValues,
+          externalAssessors: {
+            ...promotionFormValues.externalAssessors,
+            assessor2: {
+              ...promotionFormValues.externalAssessors.assessor2,
+              [fieldName]: enteredInput,
+            },
+          },
+        });
+        break;
+      case "assessor3":
+        setPromotionFormValues({
+          ...promotionFormValues,
+          externalAssessors: {
+            ...promotionFormValues.externalAssessors,
+            assessor3: {
+              ...promotionFormValues.externalAssessors.assessor3,
+              [fieldName]: enteredInput,
+            },
+          },
+        });
+        break;
+      default:
+        setPromotionFormValues({
+          ...promotionFormValues,
+          [fieldName]: enteredInput,
+        });
+    }
   };
 
   return (
