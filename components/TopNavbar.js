@@ -8,7 +8,7 @@ const TopNavbar = () => {
         <img src="/ug-crest.png" alt="University of Ghana crest" />
         <span>UG|SPMS</span>
       </div>
-      <div>
+      <div className={`${styles["right-side"]}`}>
         <spa>Welcome, User</spa>
       </div>
     </nav>

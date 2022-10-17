@@ -6,7 +6,6 @@ import TopNavbar from "./TopNavbar";
 const InnerPageWrapper = ({ children }) => {
   return (
     <>
-      <TopNavbar />
       <div className={`${styles["inner-page-wrapper"]}`}>
         <div>
           <SideNavigation />
