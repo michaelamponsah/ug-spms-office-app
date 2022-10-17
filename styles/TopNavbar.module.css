@@ -1,0 +1,18 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    background: #1F618D;
+    margin-bottom: 0.9em;
+    color: #ffffff;
+    font-weight: 600;
+}
+.ug-logo-wrapper{
+    display: flex;
+    align-items: center;
+}
+.nav-wrapper img{
+    width: 45px;
+    height: 50px;
+}
