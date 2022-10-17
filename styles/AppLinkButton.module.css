@@ -1,3 +1,14 @@
-.wrapper{
+.wrapper {
+    display: block;
+    text-transform: uppercase;
+    padding: 1em;
+    border: none;
     background-color: #1F618D;
+    color: #fefefe;
+    width: 200px;
+    min-width: auto;
+    text-align: center;
+}
+.wrapper:hover{
+    cursor: pointer;
 }

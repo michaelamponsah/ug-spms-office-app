@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import AppLinkButton from "../../../components/AppLinkButton";
 import Head from "../../../components/Head";
 import InnerPageWrapper from "../../../components/InnerPageWrapper";
 import MultiStepFormWrapper from "../../../components/MultiStepFormWrapper";
 import PromotionForm from "../../../components/PromotionForm";
+import style from "../../../styles/ProcessingApplication.module.css";
 
 const ProfessorialPromotionsPage = () => {
   // using state to keep track of all data collected from the form
@@ -134,6 +136,9 @@ const ProfessorialPromotionsPage = () => {
           Promotion Application Tracking Form
         </h1>
         <hr />
+        <div className={`${style["link-button-wrapper"]}`}>
+          <AppLinkButton>View Applications</AppLinkButton>
+        </div>
         <PromotionForm onSubmitForm={handleSubmit}>
           <MultiStepFormWrapper
             formValues={promotionFormValues}
