@@ -6,7 +6,7 @@ const SeniorLecturerPromotionsPage = () => {
     <InnerPageWrapper>
       <Head title="SPMS | UG - Applicants for Promotion" />
       <div>
-        <h1>View applicants for promotion</h1>
+        <h1>List of applicants for promotion</h1>
       </div>
     </InnerPageWrapper>
   );
