@@ -1,6 +1,9 @@
 .title {
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 14px;
     display: block;
     margin: 1em 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #36454F	;
 }

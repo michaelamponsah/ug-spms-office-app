@@ -4,7 +4,7 @@ import InputField from "./InputField";
 import styles from "../styles/ApplicantBio.module.css";
 import SelectInput from "./SelectInput";
 import TextArea from "./TextArea";
-import FormSubHeading from "./FormHeading";
+import FormSubHeading from "./FormSubHeading";
 import AppButton from "./AppButton";
 import PromotionForm from "./PromotionForm";
 

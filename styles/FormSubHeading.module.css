@@ -1,7 +1,10 @@
 .sub-title {
     display: block;
-    text-align: center;
-    font-size: 15px;
+    text-align: left;
+    font-size: 12px;
     display: block;
     margin: 0.8em 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #36454F	;
 }

@@ -130,7 +130,8 @@ const ProfessorialPromotionsPage = () => {
     <InnerPageWrapper>
       <Head title="SPMS | UG - Promotion Application Tracking Form" />
       <div>
-        <h1>Promotion Application Tracking Form</h1>
+        <h1 className="heading-main align-center">Promotion Application Tracking Form</h1>
+        <hr />
         <PromotionForm onSubmitForm={handleSubmit}>
           <MultiStepFormWrapper
             formValues={promotionFormValues}
