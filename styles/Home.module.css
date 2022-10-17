@@ -1,0 +1,29 @@
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+    width: 60%;
+    padding: 2em 0;
+}
+.heading{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #2e2e2e;
+    margin-bottom: 0.5em;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
