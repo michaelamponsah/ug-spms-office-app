@@ -1,6 +1,6 @@
 .inner-page-wrapper {
     display: flex;
-    margin-bottom: 5em;
+    margin: 5em 0;
 }
 
 .inner-page-wrapper:first-child {

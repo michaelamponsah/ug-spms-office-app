@@ -1,22 +1,27 @@
-.nav-wrapper{
+.nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em 0;
     background: #1F618D;
     margin-bottom: 0.9em;
     color: #ffffff;
     font-weight: 600;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0.5em 5%;
     margin-bottom: 2em;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
 }
-.ug-logo-wrapper{
+
+.ug-logo-wrapper {
     display: flex;
     align-items: center;
 }
-.nav-wrapper img{
+
+.nav-wrapper img {
     width: 45px;
     height: 50px;
 }
