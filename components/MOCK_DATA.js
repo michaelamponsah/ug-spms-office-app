@@ -15,7 +15,7 @@ export const data = [
     id: 3,
     first_name: "Artie",
     last_name: "Enrdigo",
-    department: "Business Development",
+    department: "Business Development ",
   },
   {
     id: 4,

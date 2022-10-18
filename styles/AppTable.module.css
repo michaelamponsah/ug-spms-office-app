@@ -22,3 +22,21 @@
   background-color: #03141f;
   color: white;
 }
+.page-size-selector-wrapper{
+  width: 200px;
+}
+.next-prev-btn-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.page-index-selector-wrapper span{
+  display: block;
+  margin-right: 1em;
+}
+.page-index-selector-wrapper{
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

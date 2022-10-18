@@ -1,7 +1,9 @@
 import React, { useMemo } from "react";
-import { useTable, useGlobalFilter } from "react-table";
+import Button from "@mui/material/Button";
+import { useTable, useGlobalFilter, usePagination } from "react-table";
 import styles from "../styles/AppTable.module.css";
 import AppGlobalFilter from "./AppGlobalFilter";
+import SelectInput from "./SelectInput";
 
 const AppTable = ({ tableData, tableColumns }) => {
   /**
@@ -18,20 +20,32 @@ const AppTable = ({ tableData, tableColumns }) => {
       columns,
       data,
     },
-    useGlobalFilter
+    useGlobalFilter,
+    usePagination
   );
 
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    page,
     prepareRow,
     state,
     setGlobalFilter,
+    nextPage,
+    previousPage,
+    canNextPage,
+    canPreviousPage,
+    pageOptions,
+    setPageSize,
   } = tableInstance;
 
-  const { globalFilter } = state;
+  const { globalFilter, pageIndex, pageSize } = state;
+
+  // Handle page selection change
+  const handleChange = (selectedValue) => {
+    setPageSize(Number(selectedValue));
+  };
 
   return (
     <>
@@ -53,7 +67,7 @@ const AppTable = ({ tableData, tableColumns }) => {
         </thead>
 
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {page.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
@@ -67,6 +81,37 @@ const AppTable = ({ tableData, tableColumns }) => {
           })}
         </tbody>
       </table>
+      <div className={[`${styles["page-index-selector-wrapper"]}`]}>
+        <span>
+          Page{" "}
+          <strong>
+            {pageIndex + 1} of {pageOptions.length}
+          </strong>
+        </span>
+        <div className={[`${styles["page-size-selector-wrapper"]}`]}>
+          <SelectInput
+            value={pageSize}
+            options={[10, 25, 50, 100]}
+            onInputChange={handleChange}
+          />
+        </div>
+      </div>
+      <div className={[`${styles["next-prev-btn-wrapper"]}`]}>
+        <Button
+          variant="contained"
+          onClick={() => previousPage()}
+          disabled={!canPreviousPage}
+        >
+          PREV
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => nextPage()}
+          disabled={!canNextPage}
+        >
+          NEXT
+        </Button>
+      </div>
     </>
   );
 };
