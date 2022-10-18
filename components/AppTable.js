@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
-import { useTable } from "react-table";
+import { useTable, useGlobalFilter } from "react-table";
 import styles from "../styles/AppTable.module.css";
+import AppGlobalFilter from "./AppGlobalFilter";
 
 const AppTable = ({ tableData, tableColumns }) => {
   /**
@@ -12,16 +13,29 @@ const AppTable = ({ tableData, tableColumns }) => {
   const columns = useMemo(() => tableColumns, []);
   const data = useMemo(() => tableData, []);
 
-  const tableInstance = useTable({
-    columns,
-    data,
-  });
+  const tableInstance = useTable(
+    {
+      columns,
+      data,
+    },
+    useGlobalFilter
+  );
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    tableInstance;
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+    state,
+    setGlobalFilter,
+  } = tableInstance;
+
+  const { globalFilter } = state;
 
   return (
     <>
+      <AppGlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
       <table className={[`${styles["table-wrapper"]}`]} {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
