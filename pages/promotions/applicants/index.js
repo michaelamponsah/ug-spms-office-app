@@ -1,5 +1,8 @@
+import AppTable from "../../../components/AppTable";
 import Head from "../../../components/Head";
 import InnerPageWrapper from "../../../components/InnerPageWrapper";
+import { COLUMNS } from "../../../components/utils/constants";
+import {data} from "../../../components/MOCK_DATA";
 
 const SeniorLecturerPromotionsPage = () => {
   return (
@@ -9,6 +12,9 @@ const SeniorLecturerPromotionsPage = () => {
         List of Applicants for Promotion
       </h1>
       <hr />
+      <section>
+        <AppTable tableData={data} tableColumns={COLUMNS} />
+      </section>
     </InnerPageWrapper>
   );
 };
