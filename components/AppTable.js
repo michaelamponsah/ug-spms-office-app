@@ -49,7 +49,10 @@ const AppTable = ({ tableData, tableColumns }) => {
 
   return (
     <>
-      <AppGlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+      <div className={[`${styles["search-bar-wrapper"]}`]}>
+        <AppGlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+      </div>
+
       <table className={[`${styles["table-wrapper"]}`]} {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (

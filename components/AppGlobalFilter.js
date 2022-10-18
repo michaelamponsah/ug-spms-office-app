@@ -7,14 +7,12 @@ const AppGlobalFilter = ({ filter, setFilter }) => {
     setFilter(enteredInput);
   };
   return (
-    <div>
-      <InputField
-        type="search"
-        placeholder="Search..."
-        value={filter}
-        onInputChange={handleChange}
-      />
-    </div>
+    <InputField
+      type="search"
+      placeholder="Search..."
+      value={filter}
+      onInputChange={handleChange}
+    />
   );
 };
 
