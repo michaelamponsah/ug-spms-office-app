@@ -26,4 +26,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.heading-main{
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  color: #36454F	;
+}
+.align-center{
+  text-align: center;
+}
 @media (prefers-color-scheme: dark) {}
